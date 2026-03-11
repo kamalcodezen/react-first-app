@@ -11,12 +11,32 @@ import "./App.css";
 function App() {
   return (
     <>
+      <Device name="Laptop" price="70000"></Device>
+      <Device name="Mobile" price="30000"></Device>
+      <Device name="Drone" price="100000"></Device>
       <Person></Person>
       <h2> First Time Using React</h2>
       <Sports></Sports>
       <Person></Person>
       <Pet></Pet>
     </>
+  );
+}
+
+function Device(Props) {
+  console.log(Props);
+  return (
+    <div
+      style={{
+        padding: "10px",
+        border: "2px solid white",
+        borderRadius: "10px",
+        marginBottom: "10px",
+      }}
+    >
+      <p>Device Name : {Props.name}</p>
+      <p>Price :{Props.price}</p>
+    </div>
   );
 }
 
@@ -42,7 +62,7 @@ function Sports() {
 function Pet() {
   const petStyle = {
     color: "yellow",
-    fontSize:"46px"
+    fontSize: "46px",
   };
   return (
     <div
