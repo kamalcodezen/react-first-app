@@ -11,6 +11,8 @@ import "./App.css";
 function App() {
   return (
     <>
+      <Car name="BMW" price="2000000"></Car>
+      <Car name="MERCEDES"></Car>
       <Device name="Laptop" price="70000"></Device>
       <Device name="Mobile" price="30000"></Device>
       <Device name="Drone" price="100000"></Device>
@@ -23,15 +25,26 @@ function App() {
   );
 }
 
+function Car({ name, price=0 }) {
+  return (
+    <div className="sports">
+      <p>
+        {name} {price}
+      </p>
+    </div>
+  );
+}
+
 function Device(Props) {
   console.log(Props);
   return (
     <div
       style={{
         padding: "10px",
-        border: "2px solid white",
+        border: "2px solid yellowgreen",
         borderRadius: "10px",
         marginBottom: "10px",
+        fontSize: "20px",
       }}
     >
       <p>Device Name : {Props.name}</p>
