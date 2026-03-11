@@ -1,4 +1,4 @@
-import "./App.jsx";
+import "./App.css";
 
 // function App() {
 //   return (
@@ -15,6 +15,7 @@ function App() {
       <h2> First Time Using React</h2>
       <Sports></Sports>
       <Person></Person>
+      <Pet></Pet>
     </>
   );
 }
@@ -22,12 +23,12 @@ function App() {
 function Person() {
   const name = "kamal";
 
-  return( <p>My Name Is {name}</p>);
+  return <p>My Name Is {name}</p>;
 }
 
 function Sports() {
   return (
-    <div>
+    <div className="sports">
       <h3>Cricket</h3>
       <ul>
         <li>Eden Garden</li>
@@ -39,14 +40,24 @@ function Sports() {
 }
 
 function Pet() {
-
-  return(
-<h2>Cat</h2>
-<h2>u</h2>
-
-
-
-  )
+  const petStyle = {
+    color: "yellow",
+    fontSize:"46px"
+  };
+  return (
+    <div
+      style={{
+        color: "red",
+        textAlign: "center",
+        background: "purple",
+        borderRadius: "10px",
+        padding: "10px",
+      }}
+    >
+      <h2 style={petStyle}>Cat</h2>
+      <p>My Small Cat</p>
+    </div>
+  );
 }
 
 export default App;
