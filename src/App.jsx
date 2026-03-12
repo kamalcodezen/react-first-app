@@ -1,4 +1,6 @@
 import "./App.css";
+import "./Todo";
+import ToDo from "./Todo";
 
 // function App() {
 //   return (
@@ -9,9 +11,15 @@ import "./App.css";
 // }
 
 function App() {
+  const price = 200;
   return (
+    
     <>
-      <Car name="BMW" price="2000000"></Car>
+      <ToDo name="Ijifa" fruit="Litchi" isFruit={true} price={price}></ToDo>
+      <ToDo name="Ijifa" fruit="Litchi" isFruit={true}></ToDo>
+      <ToDo name="Ijifa" fruit="Litchi" isFruit={false} price="50 "></ToDo>
+      <h1>React Core Concept</h1>
+      {/* <Car name="BMW" price="2000000"></Car>
       <Car name="MERCEDES"></Car>
       <Device name="Laptop" price="70000"></Device>
       <Device name="Mobile" price="30000"></Device>
@@ -20,12 +28,12 @@ function App() {
       <h2> First Time Using React</h2>
       <Sports></Sports>
       <Person></Person>
-      <Pet></Pet>
+      <Pet></Pet> */}
     </>
   );
 }
 
-function Car({ name, price=0 }) {
+function Car({ name, price = 0 }) {
   return (
     <div className="sports">
       <p>
