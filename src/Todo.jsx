@@ -15,7 +15,7 @@
 //     </p>
 //   );
 // }
-export default function ToDo({ name, fruit, isFruit, price = 0 }) {
+export default function ToDo({ name, fruit, task, isFruit, price = 0 }) {
   // <p className="sports">
 
   //   {name} favorite fruit {fruit} and ate the fruit {isDone} and fruit Price{" "}
@@ -26,17 +26,14 @@ export default function ToDo({ name, fruit, isFruit, price = 0 }) {
   if (isFruit) {
     return (
       <p>
-        {name} favorite fruit {fruit} and ate the fruit {isFruit} and fruit
-        Price
-        {price}
+        {name} favorite fruit {fruit} and {task} {isFruit} and fruit Price {price}
       </p>
     );
   }
   return (
     <h3>
       {name} favorite fruit {fruit}
-      didn't ate the fruit {isFruit}
-      and fruit Price {price}
+      {isFruit} {task}! and fruit Price {price}
     </h3>
   );
 }

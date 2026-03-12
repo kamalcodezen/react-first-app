@@ -13,11 +13,25 @@ import ToDo from "./Todo";
 function App() {
   const price = 200;
   return (
-    
     <>
-      <ToDo name="Ijifa" fruit="Litchi" isFruit={true} price={price}></ToDo>
-      <ToDo name="Ijifa" fruit="Litchi" isFruit={true}></ToDo>
-      <ToDo name="Ijifa" fruit="Litchi" isFruit={false} price="50 "></ToDo>
+      <ToDo
+        name="Ijifa"
+        fruit="Litchi"
+        task="ate the fruit"
+        isFruit={true}
+        price={price}
+      ></ToDo>
+
+      <ToDo name="shoaib" fruit="Litchi" isFruit={true}></ToDo>
+
+      <ToDo
+        name="kamal"
+        fruit="Litchi"
+        task="didn't ate the fruit"
+        isFruit={false}
+        price="50 "
+      ></ToDo>
+      
       <h1>React Core Concept</h1>
       {/* <Car name="BMW" price="2000000"></Car>
       <Car name="MERCEDES"></Car>
