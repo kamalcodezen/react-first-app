@@ -14,7 +14,24 @@ function App() {
   const price = 200;
   return (
     <>
-      <ToDo
+      <ToDo 
+      task="Learn React" 
+      isDone={true} 
+      price={price}>
+      </ToDo>
+
+      <ToDo 
+      task="Learn JavaScript" 
+      isDone={true}>       
+      </ToDo>
+
+      <ToDo 
+      task="Take a shower" 
+      isDone={false} 
+      price="100">
+      </ToDo>
+
+      {/* <ToDo
         name="Ijifa"
         fruit="Litchi"
         task="ate the fruit"
@@ -30,8 +47,8 @@ function App() {
         task="didn't ate the fruit"
         isFruit={false}
         price="50 "
-      ></ToDo>
-      
+      ></ToDo> */}
+
       <h1>React Core Concept</h1>
       {/* <Car name="BMW" price="2000000"></Car>
       <Car name="MERCEDES"></Car>
