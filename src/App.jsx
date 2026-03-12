@@ -1,6 +1,7 @@
 import "./App.css";
 import "./Todo";
 import ToDo from "./Todo";
+import Fruit from "./Todo";
 
 // function App() {
 //   return (
@@ -14,7 +15,11 @@ function App() {
   const price = 200;
   return (
     <>
-      <ToDo 
+      <Fruit name="kamal" task="Eat Litchi" isEating={true} price={price}> </Fruit>
+      <Fruit name="ijifa" task="Eat Apple " isEating={false} > </Fruit>
+      <Fruit name="shoaib" task="Eat Mango" isEating={true} price="100"> </Fruit>
+
+      {/* <ToDo 
       task="Learn React" 
       isDone={true} 
       price={price}>
@@ -29,7 +34,7 @@ function App() {
       task="Take a shower" 
       isDone={false} 
       price="100">
-      </ToDo>
+      </ToDo> */}
 
       {/* <ToDo
         name="Ijifa"

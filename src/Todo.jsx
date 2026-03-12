@@ -59,10 +59,28 @@
 //   }
 // }
 
-export default function ToDo({ task, isDone, price=0 }) {
-  if (isDone) {
-    return <li>Task : {task} {price}</li>;
+// export default function ToDo({ task, isDone, price=0 }) {
+//   if (isDone) {
+//     return <li>Task : {task} {price}</li>;
+//   }
+
+//   return <li>Task Pending : {task} {price}</li>;
+// }
+
+export default function Fruit({ name, task, isEating, price = 0 }) {
+  if (isEating) {
+    return (
+      <p>
+        Name : {name} Task : {task} Fruit prices {price} {price > 50 ? "best food" : "return food"}
+      </p>
+    );
   }
 
-  return <li>Task Pending : {task} {price}</li>;
+  if (price < 50) {
+    return (
+      <p>
+        Name : {name} Task : {task} Fruit prices : {price} {price > 50 ? "best food" : "return food"}
+      </p>
+    );
+  }
 }
