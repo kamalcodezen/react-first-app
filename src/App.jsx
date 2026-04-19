@@ -2,6 +2,9 @@ import "./App.css";
 import "./Todo";
 import ToDo from "./Todo";
 import Fruit from "./Todo";
+import Library from "./Library";
+
+
 
 // function App() {
 //   return (
@@ -11,10 +14,19 @@ import Fruit from "./Todo";
 //   );
 // }
 
+const books = [
+  { id: 1, name: "bengali", price: 250 },
+  { id: 2, name: "english", price: 290 },
+  { id: 3, name: "chemistry", price: 270 },
+  { id: 4, name: "math", price: 280 },
+];
+
 function App() {
   const price = 200;
   return (
     <>
+      <Library books={books}></Library>
+
       <Fruit name="kamal" task="Eat Litchi" isEating={true} price={price}>
         {" "}
       </Fruit>
@@ -25,8 +37,8 @@ function App() {
         {" "}
       </Fruit>
 
-      <Developer name="kamal" tech="js"/>
-      <Developer name="aisha" tech="java"/>
+      <Developer name="kamal" tech="js" />
+      <Developer name="aisha" tech="java" />
 
       {/* <ToDo 
       task="Learn React" 
@@ -78,11 +90,11 @@ function App() {
   );
 }
 
-function Developer(Props) {
+function Developer({ name, tech }) {
   return (
     <div>
-      <p>Developer : {Props.name}</p>
-      <p>Tech : {Props.tech}</p>
+      <p>Developer : {name}</p>
+      <p>Tech : {tech}</p>
     </div>
   );
 }
