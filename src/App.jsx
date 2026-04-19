@@ -15,9 +15,18 @@ function App() {
   const price = 200;
   return (
     <>
-      <Fruit name="kamal" task="Eat Litchi" isEating={true} price={price}> </Fruit>
-      <Fruit name="ijifa" task="Eat Apple " isEating={false} > </Fruit>
-      <Fruit name="shoaib" task="Eat Mango" isEating={true} price="100"> </Fruit>
+      <Fruit name="kamal" task="Eat Litchi" isEating={true} price={price}>
+        {" "}
+      </Fruit>
+      <Fruit name="ijifa" task="Eat Apple " isEating={false}>
+        {" "}
+      </Fruit>
+      <Fruit name="shoaib" task="Eat Mango" isEating={true} price="100">
+        {" "}
+      </Fruit>
+
+      <Developer name="kamal" tech="js"/>
+      <Developer name="aisha" tech="java"/>
 
       {/* <ToDo 
       task="Learn React" 
@@ -66,6 +75,15 @@ function App() {
       <Person></Person>
       <Pet></Pet> */}
     </>
+  );
+}
+
+function Developer(Props) {
+  return (
+    <div>
+      <p>Developer : {Props.name}</p>
+      <p>Tech : {Props.tech}</p>
+    </div>
   );
 }
 
