@@ -3,8 +3,7 @@ import "./Todo";
 import ToDo from "./Todo";
 import Fruit from "./Todo";
 import Library from "./Library";
-
-
+import Event from "./event";
 
 // function App() {
 //   return (
@@ -25,6 +24,8 @@ function App() {
   const price = 200;
   return (
     <>
+      <Event />
+
       <Library books={books}></Library>
 
       <Fruit name="kamal" task="Eat Litchi" isEating={true} price={price}>
